@@ -153,6 +153,7 @@ public class CoinMan extends ApplicationAdapter {
 
 		} else if (gameState==2) {
 			batch.draw(deadManTexture,Gdx.graphics.getWidth()/2-deadManTexture.getWidth()/2,manY);
+			score=0;
 			coinsY.clear();
 			coinsX.clear();
 			bombY.clear();
@@ -188,8 +189,8 @@ public class CoinMan extends ApplicationAdapter {
 
 	public void makeBomb() {
 		float height=random.nextFloat()*Gdx.graphics.getHeight();
-		bombX.add((int) height);
-		bombY.add(Gdx.graphics.getWidth());
+		bombY.add((int) height);
+		bombX.add(Gdx.graphics.getWidth());
 	}
 	
 	@Override
